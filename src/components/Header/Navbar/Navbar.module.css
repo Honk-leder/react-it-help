@@ -1,0 +1,21 @@
+.section{
+    display: flex;
+    flex-direction: row;
+    margin-top:auto;
+    margin-bottom: auto;
+    align-content: center;
+}
+
+.item{
+    margin-left:50px;
+    font-size: 18px;
+}
+.link{
+    text-decoration: none;
+    font-size: 18px;
+    background-color: white;
+    color:indianred;
+}
+.link:hover{
+    color:darkred;
+}
