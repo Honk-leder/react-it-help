@@ -9,7 +9,7 @@ function Navbar(props){
                     <NavLink className={s.link} to={'/first'}>Страница два</NavLink>
                 </div>
                 <div className={s.item}>
-                    <NavLink className={s.link} to={'/second'}>Страница три</NavLink>
+                    <NavLink className={s.link} to={'/messages'}>Вопросы</NavLink>
                 </div>
                 <div className={s.item}>
                     <NavLink className={s.link} to={'/contact'}>Обратная связь</NavLink>

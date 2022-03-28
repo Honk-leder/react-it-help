@@ -7,7 +7,6 @@ function ContactForm(props) {
     const [emailValue, setEmail] = useState('');
     const [messageValue, setMessage] = useState('');
 
-
     return (
         <div className={s.modal}>
             <div className={s.content} onClick={e => e.stopPropagation()}>
@@ -17,7 +16,7 @@ function ContactForm(props) {
                             <NavLink className={s.close} to='/'>X</NavLink>
                         </div>
                     </div>
-                <form className={s.form} action="/" method={"post"}>
+                <form className={s.form} action="/" method={""}>
                     <input className={s.component} id={"name"} required name={"name"} type={"text"} placeholder={"Ваше имя"}
                            value={nameValue} onChange={e => setName(e.target.value)}/>
                     <input className={s.component} id={'email'} required name={"email"} type={"email"}
@@ -31,6 +30,5 @@ function ContactForm(props) {
             </div>
         </div>
             )
-            }
-
-            export default ContactForm;
+}
+export default ContactForm;
