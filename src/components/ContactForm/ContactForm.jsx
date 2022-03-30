@@ -1,11 +1,26 @@
 import React, {useState} from "react";
 import s from "./ContactForm.module.css"
 import {NavLink} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import * as actions from "../../store/actions";
 
 function ContactForm(props) {
     const [nameValue, setName] = useState('');
     const [emailValue, setEmail] = useState('');
     const [messageValue, setMessage] = useState('');
+
+    const dispatch = useDispatch();
+
+    const handleTaskSubmit = () => {
+        dispatch(actions.sendMessage({
+            name:nameValue,
+            email:emailValue,
+            message:messageValue
+        }));
+        setName('');
+        setMessage('');
+        setEmail('');
+    }
 
     return (
         <div className={s.modal}>
@@ -25,7 +40,7 @@ function ContactForm(props) {
                     <textarea className={`${s.component} ${s.message}`} id={'message'} required name={"message"}
                               placeholder={"Сообщение.."} value={messageValue}
                               onChange={e => setMessage(e.target.value)}/>
-                    <input className={s.btn} type="submit" id='submit' value="Отправить"/>
+                    <input className={s.btn} type="button" onClick={handleTaskSubmit} id='submit' value="Отправить"/>
                 </form>
             </div>
         </div>
