@@ -17,7 +17,7 @@ function MessagesPage(props){
                 <div className={s.messages}>
                     <Routes path={'/messages'}>
                         {props.messages.map(function (e) {
-                            return <Route path={e.name} element={<Messages messages={e.message}/>}/>
+                            return <Route path={e.name} element={<Messages sender={e.sender} message={e.message}/>}/>
                         })}
                     </Routes>
                 </div>

@@ -9,11 +9,10 @@
 }
 
 .names{
-
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 .messages{
-    width: 50%;
+    width: 70%;
 }

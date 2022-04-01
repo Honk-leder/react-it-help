@@ -15,7 +15,8 @@ function ContactForm(props) {
         dispatch(actions.sendMessage({
             name:nameValue,
             email:emailValue,
-            message:messageValue
+            message:messageValue,
+            sender:'user'
         }));
         setName('');
         setMessage('');

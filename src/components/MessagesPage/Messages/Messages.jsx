@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import messagesPage from "../MessagesPage";
 import s from "./Messages.module.css"
 function Messages(props){
-    console.log(props.messages)
     return(
-        <div className={s.item}>{props.messages}</div>
+        props.message.map(function (e){
+           return (
+               <div className={e[0]==='user'? s.user: s.admin}>{e[1]}</div>
+           )
+        })
     )
 }
 

@@ -1,6 +1,15 @@
-.item{
+.user{
     margin: 10px 15px 15px 15px;
     padding: 10px 20px;
     background: #da9393;
     border-radius: 10px;
+    max-width: 400px;
+}
+.admin{
+    margin: 10px 15px 15px 15px;
+    padding: 10px 20px;
+    background: red;
+    border-radius: 10px;
+    float: right;
+    max-width: 400px;
 }
