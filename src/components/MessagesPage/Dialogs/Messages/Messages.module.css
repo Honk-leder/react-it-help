@@ -4,12 +4,17 @@
     background: #da9393;
     border-radius: 10px;
     max-width: 400px;
+    min-width: 200px;
+    align-self: flex-start;
+    text-align: center;
 }
 .admin{
+    text-align: center;
     margin: 10px 15px 15px 15px;
     padding: 10px 20px;
-    background: red;
+    background: #b56363;
     border-radius: 10px;
-    float: right;
+    align-self: end;
+    min-width: 100px;
     max-width: 400px;
 }

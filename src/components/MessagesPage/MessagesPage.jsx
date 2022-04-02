@@ -2,7 +2,8 @@ import React from "react";
 import s from "./MessagesPage.module.css"
 import {NavLink, Route, Routes} from "react-router-dom";
 import UserMessage from "./UserMessage/UserMessage";
-import Messages from "./Messages/Messages";
+import Messages from "./Dialogs/Messages/Messages";
+import Dialogs from "./Dialogs/Dialogs";
 
 function MessagesPage(props){
     console.log(props.messages)
@@ -17,7 +18,7 @@ function MessagesPage(props){
                 <div className={s.messages}>
                     <Routes path={'/messages'}>
                         {props.messages.map(function (e) {
-                            return <Route path={e.name} element={<Messages sender={e.sender} message={e.message}/>}/>
+                            return <Route path={e.name} element={<Dialogs name={e.name} email={e.email} message={e.message}/>}/>
                         })}
                     </Routes>
                 </div>

@@ -12,6 +12,7 @@ function ContactForm(props) {
     const dispatch = useDispatch();
 
     const handleTaskSubmit = () => {
+        if(nameValue.length!==0 && emailValue.length!==0 && messageValue.length!==0)
         dispatch(actions.sendMessage({
             name:nameValue,
             email:emailValue,
