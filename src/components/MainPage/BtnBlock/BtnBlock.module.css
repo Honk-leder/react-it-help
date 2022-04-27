@@ -1,0 +1,21 @@
+.btnBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.btn{
+    width: 40%;
+    height: 40px;
+    background-color: rgba(184, 22, 22,0.9);
+    border:none;
+    border-radius: 40px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: rgba(184, 22, 22,0.7)
+}
