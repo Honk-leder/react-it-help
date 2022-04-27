@@ -1,0 +1,14 @@
+.btn{
+    width: 60%;
+    margin: 20px auto ;
+    height: 40px;
+    background-color: rgba(184, 22, 22,0.5);
+    border:none;
+    border-radius: 40px;
+    font-size: 25px;
+    text-align: center;
+}
+.item{
+    text-decoration: none;
+    color: white;
+}
