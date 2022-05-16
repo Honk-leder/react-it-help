@@ -5,16 +5,12 @@ import {BrowserRouter,Routes,Route} from "react-router-dom";
 import MessagesPage from "./components/MessagesPage/MessagesPage";
 import {useSelector} from "react-redux";
 import MainPage from "./components/MainPage/MainPage";
-import ResumePage from "./components/MainPage/ResumePage/ResumePage";
 import React from "react";
-import AddResumeForm from "./components/MainPage/ResumePage/AddResumeForm/AddResumeForm";
-import VacancyPage from "./components/MainPage/VacancyPage/VacancyPage";
 
 
 function App(props) {
     const messages = useSelector(state => state);
-    console.log(messages);
-    return (
+       return (
         <BrowserRouter>
             <div className={"app"}>
                 <Header/>
