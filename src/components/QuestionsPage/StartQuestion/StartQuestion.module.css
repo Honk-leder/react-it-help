@@ -1,0 +1,22 @@
+.startTest {
+    text-align: center;
+}
+
+.startButton {
+    padding: 3rem 6rem;
+    margin-bottom: 1rem;
+    background: #ffac8e;
+    font-size: 5rem;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    border: none;
+    border-radius: 3px;
+}
+
+.startButton:hover {
+    background: #ff9e7b;
+}
+
+.startButton:active {
+    background: #ff9771;
+}

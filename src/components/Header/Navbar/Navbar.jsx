@@ -6,7 +6,7 @@ function Navbar(props){
     return(
             <section className={s.section}>
                 <div className={s.item}>
-                    <NavLink className={s.link} to={'/first'}>Страница два</NavLink>
+                    <NavLink className={s.link} to={'/quiz'}>Страница два</NavLink>
                 </div>
                 <div className={s.item}>
                     <NavLink className={s.link} to={'/messages'}>Вопросы</NavLink>

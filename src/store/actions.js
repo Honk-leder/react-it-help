@@ -10,3 +10,12 @@ export function sendMessage(values){
         }
     )
 };
+
+export function loginUser(values){
+    return({
+            type:actions.ACTION_LOGIN_USER,
+            email:values.email,
+            token:values.token,
+        }
+    )
+};
