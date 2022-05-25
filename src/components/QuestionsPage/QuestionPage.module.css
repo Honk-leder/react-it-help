@@ -1,0 +1,17 @@
+.quiz-container {
+    height: 650px;
+    padding: 1rem 2rem;
+    background: #ffdfd1;
+    border-radius: 3px;
+}
+
+.test-title {
+    padding: 2rem 0;
+    background: #ffac8e;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    border-radius: 3px;
+    border: none;
+}

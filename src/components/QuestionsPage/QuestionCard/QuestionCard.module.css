@@ -1,0 +1,44 @@
+.testWrapper {
+    background: #ffc3a6;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 98%;
+    border-radius: 3px;
+}
+
+.testWrapper span {
+    text-decoration: none;
+}
+
+.options {
+    padding: 1rem;
+    background: #ffdec3;
+}
+
+label {
+    padding-left: 5px;
+    font-size: 1.2rem;
+}
+
+.questionButton {
+    text-align: right;
+}
+
+.nextPageButton {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    background: #ffac8e;
+    color: white;
+    border: none;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 3px;
+}
+
+.nextPageButton:hover {
+    background: #ff9e7b;
+}
+
+.nextPageButton:active {
+    background: #ff9771;
+}

@@ -1,10 +1,11 @@
 import * as actions from './actionTypes';
 
 export default function reducer(state=[], action){
-    console.log(state);
     switch (action.type){
         case actions.ACTION_SEND_MESSAGE:
             return addMessage(state,action);
+        case actions.ACTION_LOGIN_USER:
+            return loginUser(state,action);
         default: return state;
     }
 }
@@ -25,4 +26,10 @@ function addMessage(state, action) {
     }];
 
 
+};
+function loginUser(state, action){
+    return [...state,{
+        email:action.email,
+        token:action.token,
+    }]
 }

@@ -6,6 +6,9 @@ import MessagesPage from "./components/MessagesPage/MessagesPage";
 import {useSelector} from "react-redux";
 import MainPage from "./components/MainPage/MainPage";
 import React from "react";
+import Authorisation from "./components/Authorisation/Authorisation";
+import QuestionPage from "./components/QuestionsPage/QuestionPage";
+import QuestionCard from "./components/QuestionsPage/QuestionCard/QuestionCard";
 
 
 function App(props) {
@@ -17,12 +20,16 @@ function App(props) {
                 <div className={"app-content"}>
                     <Routes>
                         <Route path='/*' element={<MainPage/>}/>
+                        <Route path='quiz/*' element={<QuestionPage/>}/>
                         <Route path='contact' element={<ContactForm/>}/>
                         <Route path='messages/*' element={<MessagesPage messages={messages}/>}/>
+                        <Route path='auth' element={<Authorisation/>}/>
                     </Routes>
                 </div>
             </div>
         </BrowserRouter>
     );
 }
+
+
 export default App;

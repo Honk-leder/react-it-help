@@ -6,7 +6,6 @@ import Messages from "./Dialogs/Messages/Messages";
 import Dialogs from "./Dialogs/Dialogs";
 
 function MessagesPage(props){
-    console.log(props.messages)
         return (
             <div className={s.container}>
                 <div className={s.names}>
