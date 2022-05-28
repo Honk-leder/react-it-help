@@ -1,10 +1,16 @@
 import {db} from "../../../firebase";
-import {ref, get, child} from "firebase/database";
+import {ref, get, child,remove} from "firebase/database";
 import {useEffect, useState} from "react";
 import s from './Card.module.css';
+import {useCookies} from "react-cookie";
+import CardResume from "./CardResume/CardResume";
+import CardVacancy from "./CardVacancy/CardVacancy";
+
+
 
 export default function Cards(props) {
     const dbRef = ref(db);
+    let [cookies,setCookies]=useCookies()
     let [data, changeData] = useState();
     let array = []
     useEffect(() => {
@@ -19,58 +25,19 @@ export default function Cards(props) {
     return (array.map((elem) => {
         if (props.content === 'resume') {
             return (
-                <CardResume data={elem}/>
+                <CardResume cookies={cookies} data={elem}/>
             )
         } else {
             return (
-                <CardVacancy data={elem}/>
+                <CardVacancy cookies={cookies} data={elem}/>
             )
         }
     }))
 }
 
-function CardVacancy(props) {
-    return (
-        <div className={s.container}>
-            <div>
-                <img className={s.image}
-                    src={'https://cdn3.iconfinder.com/data/icons/human-resources-management/512/craidlist_vacancy_jobs-256.png'}
-                />
-            </div>
-            <div>
-                <h3>{props.data.position}</h3>
-                <p>{props.data.salary}</p>
-                <p>{props.data.employment}</p>
-                <p>{props.data.responsibility}</p>
-                <p>{props.data.knowlage}</p>
-                <p>{props.data.stack}</p>
-            </div>
-        </div>
-    )
-}
 
-function CardResume(props) {
-    return (
-        <div className={s.container}>
-            <div>
-                <img className={s.image} src={'https://cdn-icons-png.flaticon.com/512/5673/5673945.png'}/>
-            </div>
-            <div>
-                <h3>{props.data.position}</h3>
-                <div>
-                    <p>{props.data.firstName} {props.data.name} {props.data.lastName}</p>
-                    <p>{props.data.age} лет</p>
-                </div>
-                <p>Образование:{props.data.education}</p>
-                <p>Опыт:{props.data.exp}</p>
-                <p>Умения:{props.data.skills}</p>
-                <p>Ссылки на проекты:<a href={props.data.projects}>{props.data.projects}/></a></p>
-                <p>{props.data.phone}</p>
-                <p>{props.data.email}</p>
 
-            </div>
-        </div>
 
-    );
-}
+
+
 

@@ -2,8 +2,12 @@ import {Route, Routes} from "react-router-dom";
 import Start from "./StartQuestion/StartQuestion";
 import s from './QuestionPage.module.css'
 import QuestionCard from "./QuestionCard/QuestionCard";
+import ResultQuestion from "./ResultQuestion/ResultQuestion";
+import {useState} from "react";
+import {useCookies} from "react-cookie";
 
 export default function QuestionPage(props){
+
 
     return(
         <div className={s.quizContainer}>
@@ -15,6 +19,7 @@ export default function QuestionPage(props){
                             <Route path={question.path} element={<QuestionCard data={question}/>}/>
                         )
                 })}
+                <Route path={'result'} element={<ResultQuestion/>}/>
             </Routes>
         </div>
     )

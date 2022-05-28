@@ -1,11 +1,12 @@
 import React, {useState} from "react";
 import s from './addResumeForm.module.css';
 import {db} from "../../../../firebase";
-import {ref,push } from "firebase/database";
+import {ref, push, set, getDatabase} from "firebase/database";
+import {useCookies} from "react-cookie";
 
 export default function AddResumeForm(props){
-    const dbRef = ref(db,'resume');
-
+    const [cookies, setCookie] = useCookies();
+    const refer=ref(db, 'resume/'+cookies.userEmail.split('@')[0]);
     let [firstName,changeFirstName]=useState('');
     let [name,changeName]=useState('');
     let [lastName,changeLastName]=useState('');
@@ -18,8 +19,10 @@ export default function AddResumeForm(props){
     let [skills,changeSkills]=useState('');
     let [projects,changeProjects]=useState('');
 
+
     function hendlerSubmit(e){
-        push(dbRef,{
+        set(refer,{
+            author:cookies.userEmail.split('@')[0],
             firstName:firstName,
             name:name,
             lastName:lastName,
