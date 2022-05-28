@@ -8,11 +8,12 @@ import MainPage from "./components/MainPage/MainPage";
 import React from "react";
 import Authorisation from "./components/Authorisation/Authorisation";
 import QuestionPage from "./components/QuestionsPage/QuestionPage";
-import QuestionCard from "./components/QuestionsPage/QuestionCard/QuestionCard";
+import Registration from "./components/Authorisation/Registration";
 
 
 function App(props) {
     const messages = useSelector(state => state);
+
        return (
         <BrowserRouter>
             <div className={"app"}>
@@ -24,6 +25,7 @@ function App(props) {
                         <Route path='contact' element={<ContactForm/>}/>
                         <Route path='messages/*' element={<MessagesPage messages={messages}/>}/>
                         <Route path='auth' element={<Authorisation/>}/>
+                        <Route path='/register' element={<Registration/>}/>
                     </Routes>
                 </div>
             </div>

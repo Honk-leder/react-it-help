@@ -1,10 +1,12 @@
 import React, {useState} from "react";
 import {db} from "../../../../firebase";
-import {ref, push} from "firebase/database";
+import {ref, set} from "firebase/database";
 import s from './AddVacancyForm.module.css'
+import {useCookies} from "react-cookie";
 
 export default function AddVacancyForm(props) {
-    const dbRef = ref(db,'vacancy');
+    const [cookies, setCookie] = useCookies();
+    const refer=ref(db, 'vacancy/'+cookies.userEmail.split('@')[0]);
 
     let [position,changePosition]= useState('Верстальщик');
     let [salary,changeSalary]=useState('')
@@ -14,7 +16,8 @@ export default function AddVacancyForm(props) {
     let [employment,changeEmployment]= useState('Полная занятость')
 
     function hendlerSubmit(e){
-        push(dbRef,{
+        set(refer,{
+            author:cookies.userEmail.split('@')[0],
            position:position,
             salary:salary,
             stack:stack,

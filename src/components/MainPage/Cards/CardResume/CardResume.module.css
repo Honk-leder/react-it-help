@@ -1,6 +1,17 @@
+.image{
+    width: 150px;
+    height: 150px;
+}
 .container{
     display: flex;
     flex-direction: row;
     border: 2px solid gray;
     margin-bottom: 5px;
+}
+
+.hiddenBtn{
+    display: none;
+}
+.deleteBtn{
+
 }
